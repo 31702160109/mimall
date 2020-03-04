@@ -5,10 +5,11 @@
 </template>
 
 <script>
+import storage from './storage'
 export default {
   name: 'App',
   mounted () {
-
+    console.log(storage.getStorage())
   }
 }
 </script>
