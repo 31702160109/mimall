@@ -5,11 +5,18 @@
 </template>
 
 <script>
-import storage from './storage'
+
 export default {
   name: 'App',
+  data () {
+    return {
+      data: {}
+    }
+  },
   mounted () {
-    console.log(storage.getStorage())
+    this.axios.get('/user/login').then((res) => {
+      this.data = res
+    })
   }
 }
 </script>
