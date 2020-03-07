@@ -1,0 +1,13 @@
+@mixin flex($level: space-between, $vertical: center) {
+  display: flex;
+  justify-content: $level;
+  align-items: $vertical;
+}
+
+@mixin bgImg($width:0, $height:0, $img:'', $size:contain) {
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background: url($img) no-repeat center;
+  background-size: $size;
+}

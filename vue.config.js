@@ -4,8 +4,11 @@ module.exports = {
     port: 8080,
     proxy: {
       '/api': {
-        target: 'http://www.hminxin.cn:8000/computer',
-        changeOrigin: true
+        target: 'http://mall-pre.springboot.cn',
+        changeOrigin: true,
+        pathRewrite: {
+          '/api': ''
+        }
       }
     }
   }
