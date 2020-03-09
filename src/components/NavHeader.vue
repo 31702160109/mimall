@@ -203,6 +203,7 @@ export default {
           height: 0;
           opacity: 0;
           overflow: hidden;
+          z-index: 10;
           border-top: 1px solid #E5E5E5;
           background-color: #FFFFFF;
           box-shadow:0px 7px 6px 0px rgba(0, 0, 0, 0.11);

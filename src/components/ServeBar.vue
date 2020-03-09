@@ -43,6 +43,9 @@ export default {
         text-align: center;
         border-right: 1px solid #E5E5E5;
         cursor: pointer;
+        &:last-child {
+          border: none;
+        }
         .item-text {
           vertical-align: middle;
           line-height: 40px;
