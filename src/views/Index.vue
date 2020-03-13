@@ -39,12 +39,12 @@
       </div>
       <div class="ads-box">
         <a v-for="(item, index) in adsList" :key="index" :href="'/#/product/'+ item.id">
-          <img :src="item.img">
+          <img v-lazy="item.img">
         </a>
       </div>
       <div class="banner-box">
         <a href="javascript:;">
-          <img src="/imgs/banner-2.webp">
+          <img v-lazy="'/imgs/banner-2.webp'">
         </a>
       </div>
     </div>
@@ -53,13 +53,13 @@
         <span class="title">手机</span>
         <div class="product-wrapper">
           <div class="banner-left">
-            <img src="/imgs/banner-3.webp">
+            <img v-lazy="'/imgs/banner-3.webp'">
           </div>
           <div class="product-list">
             <div class="list" v-for="(itemList, indexI) in phoneList" :key="indexI">
               <div class="item" v-for="(item, indexJ) in itemList" :key="indexJ">
                 <div class="item-img">
-                  <img :src="item.mainImage">
+                  <img v-lazy="item.mainImage">
                 </div>
                 <div class="item-info">
                   <h3>{{ item.name }}</h3>
@@ -72,12 +72,18 @@
         </div>
       </div>
     </div>
+    <modal modalType="middle" title="添加收获地址" btnType="1" sureText="确认" :showModal="showModal" @submit="goToCart" @cancel="showModal=false">
+      <template v-slot:modalBody>
+        <p>商品添加成功</p>
+      </template>
+    </modal>
     <serve-bar></serve-bar>
   </div>
 </template>
 
 <script>
 import ServeBar from './../components/ServeBar'
+import Modal from './../components/Modal'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 export default {
@@ -85,10 +91,12 @@ export default {
   components: {
     swiper,
     swiperSlide,
+    Modal,
     ServeBar
   },
   data () {
     return {
+      showModal: false,
       swiperOption: {
         loop: true,
         autoplay: true,

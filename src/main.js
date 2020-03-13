@@ -3,6 +3,7 @@ import App from './App.vue'
 import store from './store'
 import router from './router'
 import axios from 'axios'
+import VueLazyLoad from 'vue-lazyload'
 import VueAxios from 'vue-axios'
 
 //  mock 是否开启
@@ -26,6 +27,9 @@ axios.interceptors.response.use(function (response) {
 })
 
 Vue.use(VueAxios, axios)
+Vue.use(VueLazyLoad, {
+  loading: '/imgs/loading-svg/loading-bubbles.svg'
+})
 Vue.config.productionTip = false
 
 new Vue({
