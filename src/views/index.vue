@@ -72,18 +72,18 @@
         </div>
       </div>
     </div>
-    <modal modalType="middle" title="添加收获地址" btnType="1" sureText="确认" :showModal="showModal" @submit="goToCart" @cancel="showModal=false">
+    <!-- <modal modalType="middle" title="添加收获地址" btnType="1" sureText="确认" :showModal="showModal" @submit="goToCart" @cancel="showModal=false">
       <template v-slot:modalBody>
         <p>商品添加成功</p>
       </template>
-    </modal>
+    </modal> -->
     <serve-bar></serve-bar>
   </div>
 </template>
 
 <script>
 import ServeBar from './../components/ServeBar'
-import Modal from './../components/Modal'
+// import Modal from './../components/Modal'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 export default {
@@ -91,12 +91,12 @@ export default {
   components: {
     swiper,
     swiperSlide,
-    Modal,
+    // Modal,
     ServeBar
   },
   data () {
     return {
-      showModal: false,
+      // showModal: false,
       swiperOption: {
         loop: true,
         autoplay: true,
