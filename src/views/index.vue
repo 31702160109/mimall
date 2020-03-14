@@ -113,10 +113,10 @@ export default {
         },
       },
       swiperList: [
-        {id: 42, img: '/imgs/slider/new-slide-1.jpg'},
+        {id: 42, img: '/imgs/slider/new-slide-3.jpg'},
         {id: 43, img: '/imgs/slider/new-slide-2.webp'},
-        {id: 45, img: '/imgs/slider/slide-3.jpg'},
-        {id: 47, img: '/imgs/slider/slide-4.jpg'},
+        {id: 45, img: '/imgs/slider/new-slide-1.jpg'},
+        {id: 47, img: '/imgs/slider/new-slide-4.webp'},
         {id: 48, img: '/imgs/slider/slide-5.jpg'}
       ],
       menuList: [
