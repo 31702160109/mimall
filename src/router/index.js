@@ -26,11 +26,11 @@ const routes = [
         name: 'Index',
         component: Index
       },{
-        path: 'product/:id',
+        path: '/product/:id',
         name: 'Product',
         component: Product
       },{
-        path: 'detail/:id',
+        path: '/detail/:id',
         name: 'Detail',
         component: Detail
       },
